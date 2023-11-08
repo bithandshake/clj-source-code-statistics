@@ -8,13 +8,13 @@ The <strong>clj-source-code-statistics</strong> is a set of simple source code s
 ### deps.edn
 
 ```
-{:deps {bithandshake/clj-source-code-statistics {:git/url "https://github.com/bithandshake/clj-source-code-statistics"
-                                                 :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+{:deps {monotech-tools/clj-source-code-statistics {:git/url "https://github.com/monotech-tools/clj-source-code-statistics"
+                                                   :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
 ```
 
 ### Current version
 
-Check out the latest commit on the [release branch](https://github.com/bithandshake/clj-source-code-statistics/tree/release).
+Check out the latest commit on the [release branch](https://github.com/monotech-tools/clj-source-code-statistics/tree/release).
 
 ### Documentation
 
