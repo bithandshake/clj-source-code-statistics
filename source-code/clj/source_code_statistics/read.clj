@@ -1,8 +1,8 @@
 
 (ns source-code-statistics.read
-    (:require [io.api     :as io]
-              [regex.api  :refer [re-count re-match? re-mismatch?]]
-              [vector.api :as vector]))
+    (:require [fruits.regex.api  :refer [re-count re-match? re-mismatch?]]
+              [fruits.vector.api :as vector]
+              [io.api            :as io]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

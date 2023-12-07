@@ -1,9 +1,9 @@
 
 (ns source-code-statistics.engine
-    (:require [io.api                      :as io]
-              [math.api                    :as math]
-              [source-code-statistics.read :as read]
-              [vector.api                  :as vector]))
+    (:require [fruits.math.api             :as math]
+              [fruits.vector.api           :as vector]
+              [io.api                      :as io]
+              [source-code-statistics.read :as read]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
