@@ -37,10 +37,10 @@
   ;  :ns-count (integer)}
   [source-code _]
   {:char-count    (count    source-code)
-   :def-count     (re-count source-code #"\(def[\n\r\s\t]{1,}")
-   :defn-count    (re-count source-code #"\(defn[\n\r\s\t\-]{1,}")
+   :def-count     (re-count source-code #"\(def\s")
+   :defn-count    (re-count source-code #"\(defn[\s\-]")
    :newline-count (re-count source-code #"[\n\r]")
-   :ns-count      (re-count source-code #"\(ns[\n\r\s\t]{1,}")})
+   :ns-count      (re-count source-code #"\(ns\s")})
 
 (defn analyse-file-content
   ; @ignore
