@@ -5,5 +5,5 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @redirect (source-code-statistics.engine)
+; @redirect (source-code-statistics.engine/*)
 (def get-statistics engine/get-statistics)

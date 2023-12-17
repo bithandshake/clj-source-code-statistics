@@ -1,8 +1,8 @@
 
 (ns source-code-statistics.read
-    (:require [fruits.regex.api  :refer [re-count re-match? re-mismatch?]]
-              [fruits.vector.api :as vector]
-              [io.api            :as io]))
+    (:require [fruits.regex.api  :as regex]
+              [io.api            :as io]
+              [source-code-statistics.config :as config]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -10,18 +10,13 @@
 (defn get-file-list
   ; @ignore
   ;
-  ; @param (string) path
+  ; @param (string) source-path
   ; @param (map) options
-  ; {:exclude-pattern (regex pattern)(opt)
-  ;  :include-pattern (regex pattern)(opt)}
+  ; {:filename-pattern (regex pattern)(opt)}
   ;
   ; @return (strings in vector)
-  [path {:keys [exclude-pattern include-pattern]}]
-  (letfn [(exclude-f [%] (if exclude-pattern (re-match?    % exclude-pattern)))
-          (include-f [%] (if include-pattern (re-mismatch? % include-pattern)))]
-         (-> path (io/all-file-list)
-                  (vector/remove-items-by exclude-f)
-                  (vector/remove-items-by include-f))))
+  [source-path {:keys [filename-pattern] :or {filename-pattern config/DEFAULT-FILENAME-PATTERN}}]
+  (io/search-files source-path filename-pattern))
 
 (defn analyse-source-code
   ; @ignore
@@ -36,11 +31,11 @@
   ;  :newline-count (integer)
   ;  :ns-count (integer)}
   [source-code _]
-  {:char-count    (count    source-code)
-   :def-count     (re-count source-code #"\(def\s")
-   :defn-count    (re-count source-code #"\(defn[\s\-]")
-   :newline-count (re-count source-code #"[\n\r]")
-   :ns-count      (re-count source-code #"\(ns\s")})
+  {:char-count    (count          source-code)
+   :def-count     (regex/re-count source-code #"\(def\s")
+   :defn-count    (regex/re-count source-code #"\(defn[\s\-]")
+   :newline-count (regex/re-count source-code #"[\n\r]")
+   :ns-count      (regex/re-count source-code #"\(ns\s")})
 
 (defn analyse-file-content
   ; @ignore
@@ -52,5 +47,5 @@
   ; {:char-count (integer)
   ;  :newline-count (integer)}
   [file-content _]
-  {:char-count    (count    file-content)
-   :newline-count (re-count file-content #"\n\r")})
+  {:char-count    (count          file-content)
+   :newline-count (regex/re-count file-content #"\n\r")})
