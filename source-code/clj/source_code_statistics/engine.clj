@@ -21,12 +21,12 @@
   ; (get-statistics {:source-paths ["source-code"]})
   ; =>
   ; {:source-paths [{:source-path "source-code"
-  ;                  :source-files [{:filepath "source-code/my_namespace.clj"
-  ;                                  :stat {:char-count   3214
-  ;                                         :def-count       0
-  ;                                         :defn-count     12
-  ;                                         :new-line-count 18
-  ;                                         :ns-count        1}}]}]
+  ;                  :files [{:filepath "source-code/my_namespace.clj"
+  ;                           :stat {:char-count   3214
+  ;                                  :def-count       0
+  ;                                  :defn-count     12
+  ;                                  :new-line-count 18
+  ;                                  :ns-count        1}}]}]
   ;  :total {:char-count   3214
   ;          :def-count       0
   ;          :defn-count     12
