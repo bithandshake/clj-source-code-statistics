@@ -14,7 +14,7 @@
   ;
   ; @param (map) options
   ; {:filename-pattern (regex pattern)(opt)
-  ;   Default: #"[a-z\d\_]\.clj[cs]{0,1}"
+  ;   Default: #"[a-z\d\_]\.clj[cs]?"
   ;  :source-paths (strings in vector)}
   ;
   ; @usage
