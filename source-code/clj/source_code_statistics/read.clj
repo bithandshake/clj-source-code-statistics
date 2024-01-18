@@ -1,7 +1,7 @@
 
 (ns source-code-statistics.read
-    (:require [fruits.regex.api  :as regex]
-              [io.api            :as io]
+    (:require [fruits.regex.api              :as regex]
+              [io.api                        :as io]
               [source-code-statistics.config :as config]))
 
 ;; ----------------------------------------------------------------------------
