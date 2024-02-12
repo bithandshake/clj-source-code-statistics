@@ -22,17 +22,17 @@
   ; =>
   ; {:source-paths [{:source-path "source-code"
   ;                  :files [{:filepath "source-code/my_namespace.clj"
-  ;                           :stat {:char-count   3214
-  ;                                  :def-count       0
-  ;                                  :defn-count     12
-  ;                                  :new-line-count 18
-  ;                                  :ns-count        1}}]}]
-  ;  :total {:char-count   3214
-  ;          :def-count       0
-  ;          :defn-count     12
-  ;          :file-count      1
-  ;          :new-line-count 18
-  ;          :ns-count        1}}
+  ;                           :stat {:char-count  3214
+  ;                                  :def-count      0
+  ;                                  :defn-count    12
+  ;                                  :newline-count 18
+  ;                                  :ns-count       1}}]}]
+  ;  :total {:char-count  3214
+  ;          :def-count      0
+  ;          :defn-count    12
+  ;          :file-count     1
+  ;          :newline-count 18
+  ;          :ns-count       1}}
   ;
   ; @return (map)
   ; {:source-paths (maps in vector)
