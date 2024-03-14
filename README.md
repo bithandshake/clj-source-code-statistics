@@ -16,10 +16,6 @@ The <strong>clj-source-code-statistics</strong> is a simple source code statisti
 
 Check out the latest commit on the [release branch](https://github.com/mt-devtools/clj-source-code-statistics/tree/release).
 
-### Documentation
-
-The <strong>clj-source-code-statistics</strong> functional documentation is [available here](https://mt-devtools.github.io/clj-source-code-statistics).
-
 ### Changelog
 
 You can track the changes of the <strong>clj-source-code-statistics</strong> library [here](CHANGES.md).
@@ -27,3 +23,7 @@ You can track the changes of the <strong>clj-source-code-statistics</strong> lib
 ### Style guide
 
 Strongly recommended to adhere to the guidelines outlined in the [Clojure Style Guide](https://github.com/bbatsov/clojure-style-guide)!
+
+# Documentation
+
+The <strong>clj-source-code-statistics</strong> functional documentation is [available here](https://mt-devtools.github.io/clj-source-code-statistics).
